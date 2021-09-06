@@ -1,3 +1,4 @@
+import firebase from "node_modules/@firebase/storage"
 const auth = firebase.auth()
 const logInBtn = document.getElementById('logInBtn')
 auth.onAuthStateChanged((user) => {
