@@ -5,6 +5,7 @@ auth.onAuthStateChanged((user) => {
  console.log("logged in")
  console.log(user.uid)
  firebase.database().ref(user.uid).on('value', function(snapshot){
+   console.log(snapshot.val().Link)
    document.getElementById("myvid").src = snapshot.val().Link
  })
 
