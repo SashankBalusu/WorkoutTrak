@@ -23,20 +23,26 @@ auth.onAuthStateChanged((user) => {
 //     document.getElementById("myvid").src = itemRef
 //   })
 // })
+let firebaseRef = firebase.database().ref(useruid.toString())
+        firebaseRef.once("value", function(snapshot){
+            snapshot.forEach(function(element){
+              console.log(element)
+              storageRef.child(useruid.toString() + element.toString()).getDownloadURL()
+              .then((url) => {
+                var xhr= new XMLHttpRequest();
+                xhr.responseType = 'blob';
+                xhr.onload = (event) => {
+                  var blob = xhr.response;
+                };
+                xhr.open('GET', url);
+                xhr.send();
 
-storageRef.child(useruid.toString() + "/1630914288").getDownloadURL()
-.then((url) => {
-  var xhr= new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = (event) => {
-    var blob = xhr.response;
-  };
-  xhr.open('GET', url);
-  xhr.send();
+                // Or inserted into an <img> element
+                var vid = document.getElementById('myvid');
+                vid.setAttribute('src', url);
+            })
+        })
 
-  // Or inserted into an <img> element
-  var vid = document.getElementById('myvid');
-  vid.setAttribute('src', url);
 })
 })
 
