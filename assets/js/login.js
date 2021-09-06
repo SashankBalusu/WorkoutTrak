@@ -1,6 +1,5 @@
 const auth = firebase.auth()
 const logInBtn = document.getElementById('logInBtn')
-const storage = getStorage()
 auth.onAuthStateChanged((user) => {
  console.log("logged in")
  console.log(user.uid)
