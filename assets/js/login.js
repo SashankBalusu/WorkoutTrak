@@ -4,6 +4,9 @@ const logInBtn = document.getElementById('logInBtn')
 auth.onAuthStateChanged((user) => {
  console.log("logged in")
  console.log(user.uid)
+ firebase.database().ref(user.uid).on('value', function(snapshot){
+   document.getElementById("myvid").src = snapshot.val().Link
+ })
 
 })
 
