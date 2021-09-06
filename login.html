@@ -1,11 +1,49 @@
 <html>
+  <style>
+    button {
+      border-radius: 10px;
+      width: 200px;
+      height: 40px;
+      margin-top: 30px;
+      font-family: "Poppins", sans-serif;
+      font-size: 17px;
+      margin-left: 40px;
+    }
+    #signintogooglediv {
+      background: gray;
+      margin-left: -10px;
+      margin-top: -20px;
+      width: 150%;
+      height: 100px;
+    }
+    body {
+      background: rgb(20, 20, 20);
+      font-family: "Poppins", sans-serif;
+    }
+    h1 {
+      margin-left: 40px;
+      color: white;
+      margin-top: 90px;
+    }
+    video {
+      margin-left: 40px;
+      display:block;
+      margin-top: 50px;
+    }
+  </style>
 <head>
   <title>Firebase Login</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 </head>
 <body>
-    <button id = logInBtn>HELLO</button>
-    <video width="320" height="240" controls id = "myvid"></video>
+  <div id = "signintogooglediv"> 
+    <button id = logInBtn>Sign In With Google</button>
+  </div>
+    <h1>Your Film</h1>
+    <div id = "videocontainer">
+      <video width="320" height="240" controls id = "myvid"></video>
+
+    </div>
 
 <!-- <button id = "signInWithGoogle">Sign In W Google</button>
   <div id="login_div" class="main-div">

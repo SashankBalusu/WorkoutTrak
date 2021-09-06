@@ -24,7 +24,7 @@ auth.onAuthStateChanged((user) => {
 //   })
 // })
 
-storageRef.child(useruid.toString()).getDownloadURL()
+storageRef.child(useruid.toString() + "/1630914288").getDownloadURL()
 .then((url) => {
   var xhr= new XMLHttpRequest();
   xhr.responseType = 'blob';
