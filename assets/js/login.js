@@ -1,10 +1,11 @@
-import firebase from "node_modules/@firebase/storage"
 const auth = firebase.auth()
 const logInBtn = document.getElementById('logInBtn')
 auth.onAuthStateChanged((user) => {
  console.log("logged in")
  console.log(user.uid)
  let useruid = user.uid
+ const storageRef = firebase.storage().ref();
+
 //  firebase.storage().ref(user.uid).on('value', function(snapshot){
 //    console.log(snapshot.val().Link)
 //    document.getElementById("myvid").src = snapshot.val().Link
