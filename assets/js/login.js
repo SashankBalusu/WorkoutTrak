@@ -1,9 +1,8 @@
 const auth = firebase.auth()
 const logInBtn = document.getElementById('logInBtn')
 
-auth.onAuthStateChanged(async (user) => {
+auth.onAuthStateChanged((user) => {
  console.log("logged in")
- //window.location.href = "homeloggedin.html";
  console.log(user.uid)
 
 })
