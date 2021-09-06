@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+</head>
+<body>
+    <button id = logInBtn>HELLO</button>
+<!-- <button id = "signInWithGoogle">Sign In W Google</button>
+  <div id="login_div" class="main-div">
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+    <a href="index.html"><button style = "margin-top:20px;">Homepage</button></a>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">You're currently logged in.</p>
+    <div id = "container"></div>
+    <button onclick="logout()">Logout</button>
+    <a href="index.html"><button style = "margin-top:20px;">Homepage</button></a>
+  </div> -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAcv7O7G-gMAjkvv7NXlqmCvL-0sqPT4xo",
+  authDomain: "workoutrak.firebaseapp.com",
+  databaseURL: "https://workoutrak-default-rtdb.firebaseio.com",
+  projectId: "workoutrak",
+  storageBucket: "workoutrak.appspot.com",
+  messagingSenderId: "370023516949",
+  appId: "1:370023516949:web:5086be7c76715a90e9771c",
+  measurementId: "G-2XKMJY339X"
+    }
+    firebase.initializeApp(firebaseConfig)
+    </script>
+<script src = "assets/js/login.js"></script>
+</body>
+</html>

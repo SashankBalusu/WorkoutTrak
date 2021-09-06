@@ -1,0 +1,15 @@
+{
+  "name": "workouttrak",
+  "version": "1.0.0",
+  "description": "Workout app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sashank Balusu",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.0.1"
+  },
+  "devDependencies": {}
+}
