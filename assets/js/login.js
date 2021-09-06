@@ -6,23 +6,23 @@ auth.onAuthStateChanged((user) => {
  let useruid = user.uid
  const storageRef = firebase.storage().ref();
 
- firebase.storage().ref(user.uid).on('value', function(snapshot){
-   console.log(snapshot.val().Link)
-   document.getElementById("myvid").src = snapshot.val().Link
- })
+//  firebase.storage().ref(user.uid).on('value', function(snapshot){
+//    console.log(snapshot.val().Link)
+//    document.getElementById("myvid").src = snapshot.val().Link
+//  })
 
 const listRef = storageRef.child(useruid.toString())
 
-// listRef.listAll()
-// .then((res) => {
-//   res.prefixes.forEach((folderRef) => {
-
-//   })
-//   res.items.forEach((itemRef) => {
-//     console.log(itemRef)
-//     document.getElementById("myvid").src = itemRef
-//   })
-// })
+listRef.listAll()
+.then((res) => {
+  res.prefixes.forEach((folderRef) => {
+    console.log(folderRef)
+  })
+  res.items.forEach((itemRef) => {
+    console.log(itemRef)
+    document.getElementById("myvid").src = itemRef
+  })
+})
 
 })
 
