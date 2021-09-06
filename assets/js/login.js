@@ -11,19 +11,32 @@ auth.onAuthStateChanged((user) => {
 //    document.getElementById("myvid").src = snapshot.val().Link
 //  })
 
-const listRef = storageRef.child(useruid.toString())
+// const listRef = storageRef.child(useruid.toString())
 
-listRef.listAll()
-.then((res) => {
-  res.prefixes.forEach((folderRef) => {
-    console.log(folderRef)
-  })
-  res.items.forEach((itemRef) => {
-    console.log(itemRef)
-    document.getElementById("myvid").src = itemRef
-  })
+// listRef.listAll()
+// .then((res) => {
+//   res.prefixes.forEach((folderRef) => {
+//     console.log(folderRef)
+//   })
+//   res.items.forEach((itemRef) => {
+//     console.log(itemRef)
+//     document.getElementById("myvid").src = itemRef
+//   })
+// })
+storageRef.child(useruid.toString() + "/1630914288").getDownloadURL()
+.then((url) => {
+  var xhr= new XMLHttpRequest();
+  xhr.responseType = 'blob';
+  xhr.onload = (event) => {
+    var blob = xhr.response;
+  };
+  xhr.open('GET', url);
+  xhr.send();
+
+  // Or inserted into an <img> element
+  var vid = document.getElementById('myvid');
+  vid.setAttribute('src', url);
 })
-
 })
 
 const signIn = () => {
