@@ -136,7 +136,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-weight: 400;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 #header .logo a {
@@ -1518,6 +1517,10 @@ section {
   color: #fff;
   font-size: 18px;
   line-height: 1;
+}
+.fst-bold {
+  font-weight: bold;
+  margin-top: 30px;
 }
 
 #footer .footer-top .footer-links ul li {
