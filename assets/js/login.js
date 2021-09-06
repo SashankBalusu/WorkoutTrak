@@ -3,6 +3,8 @@ const logInBtn = document.getElementById('logInBtn')
 
 auth.onAuthStateChanged(async (user) => {
  console.log("logged in")
+ window.location.href = "homeloggedin.html";
+
 })
 
 const signIn = () => {
